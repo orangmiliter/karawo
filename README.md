@@ -18,5 +18,5 @@ python karawo.py --abstract "forensik digital"
 ```
 **Pencarian berdasarkan title / judul**
 ```bash
-python karawo.py --title "forensik digital" --> search by title name
+python karawo.py --title "forensik digital"
 ```
