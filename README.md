@@ -1,5 +1,5 @@
 # karawo
-karawo - garda rujukan digital
+Karawo merupakan aplikasi untuk mendukung analisis bibliometrika dengan melakukan scraping data dari portal Garda Rujukan Digital (Garuda) dengan luaran berupa berkas Research Information System (.ris).
 
 #### install requirements
 
