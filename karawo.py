@@ -21,7 +21,7 @@ http = urllib3.PoolManager()
 
 def Title():
 
-    url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?select=title&q={}".format(args.title.replace(" ", "+")))
+    url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?select=title&q={}".format(args.title.replace(" ", "+")))
     data = url.data
     bs = BeautifulSoup(data, 'lxml')
     divPage = bs.find('div', {"class": "page-column"})
@@ -30,7 +30,7 @@ def Title():
     # print(regexNum[0])
     regexNum = int(regexNum[0])
     for i in range(1, regexNum+1):
-        url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?page={}&q={}&select=title".format(i, args.title.replace(" ", "+")))
+        url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?page={}&q={}&select=title".format(i, args.title.replace(" ", "+")))
         data = url.data
 
         bs = BeautifulSoup(data, 'lxml')
@@ -61,7 +61,7 @@ def Title():
                 time.sleep(0.5)
 
 def Abst():
-    url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?select=abstract&q={}".format(args.abstract.replace(" ", "+")))
+    url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?select=abstract&q={}".format(args.abstract.replace(" ", "+")))
     data = url.data
     bs = BeautifulSoup(data, 'lxml')
     divPage = bs.find('div', {"class": "page-column"})
@@ -70,7 +70,7 @@ def Abst():
     # print(regexNum[0])
     regexNum = int(regexNum[0])
     for i in range(1, regexNum+1):
-        url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?page={}&q={}&select=abstract".format(i, args.abstract.replace(" ", "+")))
+        url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?page={}&q={}&select=abstract".format(i, args.abstract.replace(" ", "+")))
         data = url.data
 
         bs = BeautifulSoup(data, 'lxml')
@@ -100,7 +100,7 @@ def Abst():
                 nulis.close()
                 time.sleep(0.5)
 def Auth():
-    url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?select=author&q={}".format(args.author.replace(" ", "+")))
+    url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?select=author&q={}".format(args.author.replace(" ", "+")))
     data = url.data
     bs = BeautifulSoup(data, 'lxml')
     divPage = bs.find('div', {"class": "page-column"})
@@ -109,7 +109,7 @@ def Auth():
     # print(regexNum[0])
     regexNum = int(regexNum[0])
     for i in range(1, regexNum+1):
-        url = http.request("GET", "https://garuda.ristekbrin.go.id/documents?page={}&q={}&select=author".format(i, args.author.replace(" ", "+")))
+        url = http.request("GET", "https://garuda.kemdikbud.go.id/documents?page={}&q={}&select=author".format(i, args.author.replace(" ", "+")))
         data = url.data
 
         bs = BeautifulSoup(data, 'lxml')
